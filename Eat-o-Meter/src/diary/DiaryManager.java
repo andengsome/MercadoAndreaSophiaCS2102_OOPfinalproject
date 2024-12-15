@@ -39,7 +39,7 @@ public class DiaryManager {
             System.out.println("----------------------------------------");
             System.out.println("1. Log food");
             System.out.println("2. Log Exercise");
-            System.out.println("3. View Summary");
+            System.out.println("3. View History");
             System.out.println("4. Exit");
             System.out.println("----------------------------------------");
             System.out.print("Input: ");
