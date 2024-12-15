@@ -20,7 +20,7 @@ This project utilizes Object-Oriented Programming (OOP) principles to ensure mod
   
 - 🔄 **Polymorphism**: This principle is used in the `dailyCalorieGoal()` method to calculate different calorie goals based on the user's objective (e.g., weight loss or gain). The same method name is used, but its behavior changes dynamically by invoking different internal methods (`calculateCalorieDeficit()` for weight loss and `calculateCalorieSurplus()` for weight gain). This allows the program to handle various user goals with a single method, improving code flexibility, reusability, and scalability.
   
-- 🧩 **Abstraction**: The `DiaryManager` class abstracts the complexity of managing food logs, exercises, and summaries, making it easier for users to interact with the system without worrying about the underlying logic. 
+- 🧩 **Abstraction**: The `CalculateCalories` class demonstrates abstraction by encapsulating complex calorie computation logic into simple, reusable methods, such as `calculateBMR()`, `calculateTDEE()`, and `dailyCalorieGoal()`. This allows other parts of the project to interact with calorie-related functionality without needing to understand the intricate formulas or conditional logic behind them. The abstraction improves ease of use, maintainability, and reusability, as any changes to the calorie computation logic can be made within this class without affecting other components, ensuring a more organized and efficient system.
 
 ## 🌱 Details of the Chosen SDG and Its Integration into the Project 
 This project aligns with **SDG 3: Good Health and Well-being**, focusing on promoting healthy lifestyles and well-being. By tracking calories, exercises, and weight progress, the system enables users to:
