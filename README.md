@@ -1,19 +1,28 @@
 # Eat-o-Meter: Calorie Tracking System 🍏🥗
 
-## 📝 I. Project Overview 
+## I. Project Overview 📝
 Eat-o-Meter is a Java-based console application designed to help users track their daily calorie intake and exercise, manage their health goals, and maintain a balanced lifestyle. It provides a user-friendly interface for logging food, exercises, and tracking progress. By calculating metrics such as Basal Metabolic Rate (BMR) and Total Daily Energy Expenditure (TDEE), it helps users make informed decisions to achieve their fitness goals.
 
-## 💡 II. Explanation of OOP Principles Applied 
+## Key Features 🏮
+- 🔐 **Sign Up/Log In**: Users will sign up or log in to access the manu and other features.
+- 🔥 **Calculate and Display Daily Calorie**: Calculates your daily calorie intake based on your data and goals then display it on the home menu.
+- 📔 **Log Items to Diary**: Log food or exercise in the diary with the details needed by the system.
+- 🔎 **View Log History**: Displays all your logged items with date and calorie details.
+- 📊 **View Weekly Report**: Display weekly calorie details and logged items.
+- ⚖ **Weight Progress**: Weekly weight update to show your progress toward your goal.
+- 🗑️ **Delete Account**: Allows to delete your account and the connected data.
+
+## II. Explanation of OOP Principles Applied 💡
 This project utilizes Object-Oriented Programming (OOP) principles to ensure modularity, reusability, and maintainability:
 - 🔒 **Encapsulation**: User-related data (e.g., name, age, weight, TDEE) is encapsulated in the `UserProfile` class while the item attributes (food, exercise, calories consumed/burned) is mainly encapsulated in `DiaryEntry`. The private attributes are accessed and modified through public methods.
    
-- 📚 **Inheritance**: This principle exhibits in the parent class `DiaryEntry` and the subclasses `FoodEntry` and `ExerciseEntry`. The parent class containes common attributres (type, category, item_name, calories, date, etc.) that serves as a generel template for all diary entries, whether they relate to food or exercise. `FoodEntry` adds specific properties related to food, such as quantity and unit (grams, slices, pieces, etc.) while `ExerciseEntry` adds properties like duration and the unit 'minutes'. These classes ensure code reusability and organization and building a more scalable, maintainable, and organized Eat-o-Meter system.
+- 📚 **Inheritance**: The `DiaryEntry` class serves as a base for `FoodEntry` and `ExerciseEntry`, containing shared attributes (e.g., username, type, category, itemName, calories, and date). `FoodEntry` adds properties like `quantity` and `unit`, while ExerciseEntry includes `duration` and `unit`. This structure promotes code reusability and organization, making the Eat-o-Meter system scalable, maintainable, and flexible.
   
-- 🔄 **Polymorphism**: Methods like `calculateCalories()` exhibit polymorphism, allowing different types of calorie calculations based on user goals (e.g., weight loss or gain).
+- 🔄 **Polymorphism**: This principle is used in the `dailyCalorieGoal()` method to calculate different calorie goals based on the user's objective (e.g., weight loss or gain). The same method name is used, but its behavior changes dynamically by invoking different internal methods (`calculateCalorieDeficit()` for weight loss and `calculateCalorieSurplus()` for weight gain). This allows the program to handle various user goals with a single method, improving code flexibility, reusability, and scalability.
   
 - 🧩 **Abstraction**: The `DiaryManager` class abstracts the complexity of managing food logs, exercises, and summaries, making it easier for users to interact with the system without worrying about the underlying logic. 
 
-## 🌱 III. Details of the Chosen SDG and Its Integration into the Project 
+## 🌱 Details of the Chosen SDG and Its Integration into the Project 
 This project aligns with **SDG 3: Good Health and Well-being**, focusing on promoting healthy lifestyles and well-being. By tracking calories, exercises, and weight progress, the system enables users to:
 - 🎯 Set personalized health goals. 
 - 🍽️🏋️ Track daily food intake and physical activities. 
@@ -21,8 +30,8 @@ This project aligns with **SDG 3: Good Health and Well-being**, focusing on prom
 
 The project encourages users to adopt healthy habits and make informed decisions about their daily nutrition and exercise, contributing to their long-term well-being. 🌍❤️
 
-## 🚀 IV. Instructions for Running the Program 
 
+## IV. Instructions for Running the Program 🚀
 ### ⚙️ Prerequisites :
 - JDK 11 or later installed on your system. ☕
 - MySQL 8.0.40 or later installed and running. 🛠️
@@ -49,8 +58,8 @@ The project encourages users to adopt healthy habits and make informed decisions
   ```
   java src.main.MainMenu
   ```
-
+  
 4. **Use the Application:**
 - Sign up or log in as a user. 🔑
-- Setup goals 🎯
-- Access the menu options to log your food or exercise, track calories, and view weekly reports. 📊
+- Setup your goals in using the system 🎯
+- Access the menu options to log food or exercise, track calories, and view weekly reports. 📊
