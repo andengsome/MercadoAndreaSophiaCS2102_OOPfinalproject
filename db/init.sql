@@ -1,6 +1,6 @@
-CREATE DATABASE IF NOT EXISTS eat-o-meter;
+CREATE DATABASE IF NOT EXISTS eatometer;
 
-USE eat-o-meter;
+USE eatometer;
 
 CREATE TABLE IF NOT EXISTS users(
     id INT AUTO_INCREMENT UNIQUE,
@@ -54,18 +54,6 @@ CREATE TABLE IF NOT EXISTS weight_progress (
 );
 
 DELIMITER $$
-
-CREATE TRIGGER before_insert_entries BEFORE INSERT ON diary_entries 
-FOR EACH ROW
-BEGIN
-    SET NEW.entry_id = CONCAT('EID', LPAD(NEW.id, 2, '0'));
-END$$
-
-CREATE TRIGGER before_insert_items BEFORE INSERT ON log_items 
-FOR EACH ROW
-BEGIN
-    SET NEW.log_id = CONCAT('LID', LPAD(NEW.id, 2, '0'));
-END$$
 
 CREATE TRIGGER update_status_progress BEFORE INSERT ON weight_progress 
 FOR EACH ROW
