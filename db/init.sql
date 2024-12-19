@@ -96,7 +96,21 @@ INSERT INTO users(username, password, name, age, sex, height, starting_weight, g
     ( 'itsnottomas', 'Tomasito@12', 'Tomas Rodriguez', 28, 'Male', 173.0, 54.0, 'Gain Weight', 54.3, 67.0, 'Extra Active', 2562.56),
     ('magiliwofc', 'Magi0214', 'Magiliw Cruz', 21, 'Female', 157.0, 65.8, 'Lose Weight', 65.8, 56.0, 'Lightly Active', 1735.80);
 
+INSERT INTO log_items (username, item_type, category, item_name, calories, quantity, unit, logged_date) VALUES
+    ('alamat.taneo', 'Food', 'Breakfast', 'Scrambled Eggs', 150, 2, 'pieces', '2024-12-01'),
+    ('alamat.taneo', 'Exercise', 'Cardiovascular', 'Running', 300, 60, 'minutes', '2024-12-01'),
+    ('itsnottomas', 'Food', 'Lunch', 'Grilled Chicken', 250, 1, 'serving', '2024-12-03'),
+    ('itsnottomas', 'Exercise', 'Strength', 'Deadlift', 400, 45, 'minutes', '2024-12-03'),
+    ('magiliwofc', 'Food', 'Dinner', 'Vegetable Salad', 120, 1, 'bowl', '2024-12-02'),
+    ('magiliwofc', 'Exercise', 'Workout Routines', 'Hatha Yoga', 100, 60, 'minutes', '2024-12-02');
+
 INSERT INTO diary_entries(username, entry_date, calories_consumed, calories_burned ) VALUES
     ('alamat.taneo', '2024-12-01', 1731.8, 521.0),
     ('itsnottomas', '2024-12-03', 2854.67, 976.0),
     ('magiliwofc', '2024-12-02', 2035.80, 305.0);
+
+INSERT INTO weight_progress (username, goal, prev_weight, current_weight, progress, status, goal_weight) VALUES
+    ('alamat.taneo', 'Lose Weight', 75.0, 74.5, 0.5, 'loss', 65.0),
+    ('itsnottomas', 'Gain Weight', 54.0, 54.3, -0.3, 'gained', 67.0),
+    ('magiliwofc', 'Lose Weight', 65.8, 65.5, 0.3, 'loss', 56.0);
+
